@@ -10,7 +10,7 @@ import com.pickerview.R;
 import java.util.ArrayList;
 
 @SuppressWarnings("ALL")
-class OptionsPickerView<T> extends BasePickerView implements View.OnClickListener {
+public class OptionsPickerView<T> extends BasePickerView implements View.OnClickListener {
     private final WheelOptions wheelOptions;
     private final TextView tvTitle;
     private OnOptionsSelectListener optionsSelectListener;
