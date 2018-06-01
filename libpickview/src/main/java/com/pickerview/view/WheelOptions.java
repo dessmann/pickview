@@ -15,6 +15,8 @@ class WheelOptions<T> {
 	private WheelView wv_option1;
 	private WheelView wv_option2;
 	private WheelView wv_option3;
+	
+	private int contentTextSize = 25;
 
     private ArrayList<ArrayList<T>> mOptions2Items;
 	private ArrayList<ArrayList<ArrayList<T>>> mOptions3Items;
@@ -74,7 +76,7 @@ class WheelOptions<T> {
 					.get(0)));// 设置显示数据
 		wv_option3.setCurrentItem(wv_option3.getCurrentItem());// 初始化时显示的数据
 
-		int textSize = 25;
+		int textSize = contentTextSize;
 
 		wv_option1.setTextSize(textSize);
 		wv_option2.setTextSize(textSize);
