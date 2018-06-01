@@ -106,6 +106,10 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
     public void setCyclic(boolean cyclic1,boolean cyclic2,boolean cyclic3) {
         wheelOptions.setCyclic(cyclic1,cyclic2,cyclic3);
     }
+    
+    public void setTextSize(int size) {
+        wheelOptions.setContentTextSize(size);
+    }
 
 
     @Override
