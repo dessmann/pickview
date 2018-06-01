@@ -160,6 +160,13 @@ class WheelOptions<T> {
 		wv_option2.setCyclic(cyclic);
 		wv_option3.setCyclic(cyclic);
 	}
+	
+	/**
+	 * 设置options的字体大小
+	 */
+	public void setContentTextSize(int fontSize) {
+		contentTextSize = fontSize;
+	}
 
 	/**
 	 * 分别设置第一二三级是否循环滚动
