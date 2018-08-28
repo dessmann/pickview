@@ -9,15 +9,12 @@ import com.pickerview.adapter.NumericWheelAdapter;
 import com.pickerview.lib.WheelView;
 import com.pickerview.listener.OnItemSelectedListener;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 
 class WheelTime {
 	private static final String TAG = "WheelTime";
-	public static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.US);
+	/*public static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());*/
 	private View view;
 	private WheelView wv_year;
 	private WheelView wv_month;

@@ -8,8 +8,10 @@ import android.widget.TextView;
 import com.pickerview.R;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Sai on 15/11/22.
@@ -123,7 +125,7 @@ public class TimePickerView extends BasePickerView implements View.OnClickListen
             dismiss();
         } else if (timeSelectListener != null) {
             try {
-                Date date = WheelTime.dateFormat.parse(wheelTime.getTime());
+                Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).parse(wheelTime.getTime());
                 timeSelectListener.onTimeSelect(date);
             } catch (ParseException e) {
                 e.printStackTrace();
