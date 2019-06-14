@@ -123,7 +123,7 @@ public class WheelView extends View {
 
 		if (attrs != null) {
 			TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.WheelView, 0, 0);
-			mGravity = a.getInt(R.styleable.WheelView_gravity, Gravity.CENTER);
+			mGravity = a.getInt(R.styleable.WheelView_gravity1, Gravity.CENTER);
 			textColorOut = a.getColor(R.styleable.WheelView_textColorOut, textColorOut);
 			textColorCenter = a.getColor(R.styleable.WheelView_textColorCenter, textColorCenter);
 			dividerColor = a.getColor(R.styleable.WheelView_dividerColor, dividerColor);
