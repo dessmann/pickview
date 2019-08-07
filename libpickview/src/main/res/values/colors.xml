@@ -12,4 +12,9 @@
     <color name="bgColor_overlay">#60000000</color>
     <color name="white">#ffffff</color><!--白色 -->
     <color name="transparent">#00000000</color>
+
+    <color name="ui_color_b2b7">#AAB2B7</color>
+    <color name="ui_colorWhite">#ffffff</color>
+    <color name="ui_white">#ffffff</color>
+    <color name="ui_color_6F7C">#6F7C8E</color>
 </resources>
