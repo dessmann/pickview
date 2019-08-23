@@ -2,6 +2,7 @@ package com.pickerview.view;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -43,7 +44,17 @@ public class BasePickerView {
 		//decorView = (ViewGroup) ((Activity) context).getWindow().getDecorView().findViewById(android.R.id.content);
 		decorView = (ViewGroup) ((Activity) context).getWindow().getDecorView();
 		rootView = (ViewGroup) layoutInflater.inflate(R.layout.layout_basepickerview, decorView, false);
-		rootView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+		/*rootView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));*/
+
+		FrameLayout.LayoutParams params1 = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+			View navigationView = decorView.findViewById(android.R.id.navigationBarBackground);
+			if (navigationView != null) {
+				params1.setMargins(0, 0, 0, navigationView.getHeight());
+			}
+		}
+		rootView.setLayoutParams(params1);
+
 		contentContainer = (ViewGroup) rootView.findViewById(R.id.content_container);
 		contentContainer.setLayoutParams(params);
 	}
